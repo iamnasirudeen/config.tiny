@@ -1,0 +1,22 @@
+{
+  "name": "config",
+  "version": "1.0.0",
+  "description": "A mimimal implementation of the popular config library. It can be used to saving environment variables.",
+  "main": "config.js",
+  "repository": "https://github.com/iamnasirudeen/config.tiny.git",
+  "author": "Olohundare Nasirudeen <iamnasirudeen@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "conf",
+    "config",
+    "configuration",
+    "node-config",
+    "config-node",
+    "env",
+    "environment"
+  ],
+  "bugs": {
+    "url": "https://github.com/iamnasirudeen/config.tiny/issues"
+  },
+  "homepage": "https://github.com/iamnasirudeen/config.tiny#readme"
+}
