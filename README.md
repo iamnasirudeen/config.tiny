@@ -22,13 +22,13 @@ Create a **config** folder in the root directory of your project and create a fi
 
 e.g
 
-```
+```bash
 cd `path/to/project/` && mkdir config && cd config && touch default.json
 ```
 
 The code above helps you create a config folder and also a default.json file inside the folder then you can use it like this
 
-```
+```js
 const config = require("config-tiny");
 let port = config.get("port") || process.env.PORT;
 ```
@@ -41,10 +41,10 @@ The Config folder has to be in the root directory of your project as config uses
 
 e.g
 
-```
-config.get("data.email") // iamnasirudeen@gmail.com
-config.get("data") // {email: "iamnasirudeen@gmail.com"}
-config.get("github_handle") // iamnasirudeen
+```js
+config.get("data.email"); // iamnasirudeen@gmail.com
+config.get("data"); // {email: "iamnasirudeen@gmail.com"}
+config.get("github_handle"); // iamnasirudeen
 ```
 
 ## Use Case
