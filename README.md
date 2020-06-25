@@ -4,13 +4,13 @@ A personal implemention of the popular config library on NPM
 
 ## Quick Start
 
-```
+```bash
 npm i config-tiny
 ```
 
 or
 
-```
+```bash
 yarn add config-tiny
 ```
 
@@ -23,7 +23,7 @@ Create a **config** folder in the root directory of your project and create a fi
 e.g
 
 ```
-cd yourProjectDirectory && mkdir config && cd config && touch default.json
+cd `path/to/project/` && mkdir config && cd config && touch default.json
 ```
 
 The code above helps you create a config folder and also a default.json file inside the folder then you can use it like this
@@ -37,7 +37,7 @@ let port = config.get("port") || process.env.PORT;
 
 The Config folder has to be in the root directory of your project as config uses the nodejs **process.cwd()** API to locate the root directory of the config folder.
 
-config.tiny doesnt really support nested objects for now. Nested objects is one feature i would be adding later on. But it has support for a single nested object.
+`config.tiny` doesnt really support nested objects a future version would have this feature supported.
 
 e.g
 
