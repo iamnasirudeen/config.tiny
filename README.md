@@ -4,7 +4,17 @@ A personal implemention of the popular config library on NPM
 
 ## Quick Start
 
-It's not actually a Module on NPM for now, but you can just git clone https://github.com/iamnasirudeen/config.tiny and use in your project. config.tiny does not depend on any other nodejs library.
+```
+npm i config-tiny
+```
+
+or
+
+```
+yarn add config-tiny
+```
+
+You can also fork the project on github at https://github.com/iamnasirudeen/config-tiny
 
 ## Usage
 
@@ -19,7 +29,7 @@ cd yourProjectDirectory && mkdir config && cd config && touch default.json
 The code above helps you create a config folder and also a default.json file inside the folder then you can use it like this
 
 ```
-const config = require("yourConfigFilePath");
+const config = require("config-tiny");
 let port = config.get("port") || process.env.PORT;
 ```
 
