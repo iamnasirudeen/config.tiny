@@ -14,7 +14,7 @@ or
 yarn add config-tiny
 ```
 
-You can also fork the project on github at https://github.com/iamnasirudeen/config-tiny
+You can also fork the project on github at https://github.com/iamnasirudeen/config.tiny
 
 ## Usage
 
