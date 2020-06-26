@@ -26,7 +26,9 @@ e.g
 cd `path/to/project/` && mkdir config && cd config && touch default.json
 ```
 
-The content of the default.json file should look like the one below.
+The code above helps you create a config folder and also a default.json file inside the folder then you can use it like this.
+
+The content of the `default.json` file should look like the one below.
 
 ```js
 {
@@ -39,7 +41,7 @@ The content of the default.json file should look like the one below.
 
 ```
 
-The code above helps you create a config folder and also a default.json file inside the folder then you can use it like this
+Then
 
 ```js
 const config = require("config-tiny");
@@ -48,7 +50,7 @@ let port = config.get("port") || process.env.PORT;
 
 ## Note
 
-The Config folder has to be in the root directory of your project as config uses the nodejs **process.cwd()** API to locate the root directory of the config folder.
+The Config folder has to be in the root directory of your project as config uses the nodejs `**process.cwd()**` API to locate the root directory of the config folder.
 
 `config.tiny` doesnt really support nested objects a future version would have this feature supported.
 
