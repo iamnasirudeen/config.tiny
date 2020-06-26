@@ -50,7 +50,7 @@ let port = config.get("port") || process.env.PORT;
 
 ## Note
 
-The Config folder has to be in the root directory of your project as config uses the nodejs `**process.cwd()**` API to locate the root directory of the config folder.
+The Config folder has to be in the root directory of your project as config uses the nodejs `process.cwd()` API to locate the root directory of the config folder.
 
 `config.tiny` doesnt really support nested objects a future version would have this feature supported.
 
