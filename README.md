@@ -26,6 +26,19 @@ e.g
 cd `path/to/project/` && mkdir config && cd config && touch default.json
 ```
 
+The content of the default.json file should look like the one below.
+
+```js
+{
+  "data": {
+    "email": "iamnasirudeen@gmail.com"
+  },
+  "github_handle": "iamnasirudeen",
+  "port": 3000
+}
+
+```
+
 The code above helps you create a config folder and also a default.json file inside the folder then you can use it like this
 
 ```js
