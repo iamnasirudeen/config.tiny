@@ -14,10 +14,10 @@ if (!fs.existsSync(config_file))
 
 const config = function () {};
 
-config.prototype.get = function (arg) {
-  // Make default.json object files immutable and also parse it from string to Object
-  let parsed_config_file = Object.freeze(JSON.parse(read_config_file));
+// Make default.json object files immutable and also parse it from string to Object
+let parsed_config_file = Object.freeze(JSON.parse(read_config_file));
 
+config.prototype.get = function (arg) {
   let arg_is_an_object = arg.split(".").length > 1;
   if (arg_is_an_object) {
     let arg_array = arg.split(".");
@@ -42,6 +42,34 @@ config.prototype.get = function (arg) {
       return arg.concat(" doesnt exist in the config/default.json file");
 
     return parsed_config_file[arg_value];
+  }
+};
+
+config.prototype.has = function (arg) {
+  let arg_is_an_object = arg.split(".").length > 1;
+  if (arg_is_an_object) {
+    let arg_array = arg.split(".");
+    let new_argument = arg_array[arg_array.length - 1];
+    let res;
+
+    Object.keys(parsed_config_file).map((key, index) => {
+      if (parsed_config_file[key].hasOwnProperty(new_argument)) res = true;
+
+      if (res == true) return;
+      else res = false;
+    });
+    return res;
+  }
+
+  if (!arg_is_an_object) {
+    // Filter through all the objects in the default.json file and get the value of arg(argument)
+    let arg_value = Object.keys(parsed_config_file)
+      .filter((item) => item == arg)
+      .toString();
+
+    if (arg_value == "") return false;
+
+    return true;
   }
 };
 
