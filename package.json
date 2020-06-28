@@ -1,6 +1,6 @@
 {
   "name": "config-tiny",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A mimimal implementation of the popular config library. It can be used to saving environment variables.",
   "main": "config.js",
   "repository": "https://github.com/iamnasirudeen/config.tiny.git",
