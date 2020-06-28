@@ -48,6 +48,23 @@ const config = require("config-tiny");
 let port = config.get("port") || process.env.PORT;
 ```
 
+You can also check the validity of a string before getting the value using the `config.has` function. e.g
+
+```js
+const config = require("config-tiny");
+
+// Note: config.has function returns a boolean of true/false
+
+// using ternary operator
+const port = config.has("port") ? config.get("port") : 3000;
+
+// using if statement
+if (config.has("data.email")) {
+  // do anything with your value here
+  let email = config.get("data.email");
+}
+```
+
 ## Note
 
 The Config folder has to be in the root directory of your project as config uses the nodejs `process.cwd()` API to locate the root directory of the config folder.
